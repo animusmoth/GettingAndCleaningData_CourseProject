@@ -4,7 +4,7 @@ run_analysis = function () {
 fileName1 = paste("./data.zip", sep="")
 if (!file.exists(fileName1)) {
   fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-  download.file(fileUrl, destfile = fileName1)
+  download.file(fileUrl, destfile = fileName1, method="curl")
   unzip(fileName1)
 }
 
@@ -12,6 +12,7 @@ library(dplyr)
 library(stringr)
 
 ## Load required Data
+print("Loading required datasets...")
 x_test <-read.csv2("UCI HAR Dataset/test/X_test.txt", header=FALSE, sep="", stringsAsFactors=FALSE)      ## loads test data
 x_train <-read.csv2("UCI HAR Dataset/train/X_train.txt", header=FALSE, sep="", stringsAsFactors=FALSE)     ## loads train data
 
@@ -23,7 +24,7 @@ activity_train <- read.csv2("UCI HAR Dataset/train/y_train.txt", header=FALSE, s
 
 activity_labels <- read.csv2("UCI HAR Dataset/activity_labels.txt", header=FALSE, sep=" ", stringsAsFactors=FALSE)  ## loads activity labels
 feature <- read.csv2("UCI HAR Dataset/features.txt", header=FALSE, sep=" ", stringsAsFactors=FALSE) ## loads features vector
-print("All data in...")
+print("All data in!!")
 
 ## Label Activities
 colnames <- c("Activity_ID", "Activity_Label")
@@ -60,6 +61,7 @@ train <- x_train[,featureNotDup]
 print("Duplicate columns removed...")
 
 ## convert all values to double
+print("Converting values do 'double'...")
 test <- sapply(test, as.double)
 train <- sapply(train, as.double)
 print("All values converted to double...")
