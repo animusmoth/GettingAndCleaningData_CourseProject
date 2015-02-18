@@ -16,6 +16,43 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 In this Dataset we show the **Calculated Average** of features described in the "Tidy_Data.txt" dataset, grouped_by "Subject" and "Activity"
 
+There are two additional variables added:
+
+*Subjects* is related to each of the *30 test subjects used* in the study.
+*Activity Label* is related to each of the activities tested in the study.
+
+Activities are:
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
+The remaining variables correspond to the average of the mean and std deviation of the readings performed in the original study.
+These signals were used to estimate variables of the feature vector for each pattern:  
+
+"-XYZ" is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+
 #License Information:
 
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 

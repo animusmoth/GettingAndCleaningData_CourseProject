@@ -46,6 +46,19 @@ The set of variables that were estimated from these signals are:
 mean(): Mean value
 std(): Standard deviation
 
+There are two additional variables added:
+
+*Subjects* is related to each of the *30 test subjects used* in the study.
+*Activity Label* is related to each of the activities tested in the study.
+
+Activities are:
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
 #License Information:
 
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
